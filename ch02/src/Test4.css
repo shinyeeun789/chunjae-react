@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.success {
+    background-color: skyblue;
+}
+
+.failure {
+    background-color: pink;
+}
