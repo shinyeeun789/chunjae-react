@@ -1,0 +1,26 @@
+.Menu {
+  width: 600px;
+  margin: 20px auto;
+}
+.Menu ul {
+  list-style: none;
+  margin: 20px auto;
+  padding: 12px;
+}
+.Menu ul li {
+  display: inline-block;
+  margin: 10px;
+}
+.Menu ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 6px 10px;
+  background-color: #333;
+  color: white;
+}
+.Menu ul li a:hover {
+  background-color: deeppink;
+}
+.Menu ul li a:active {
+  background-color: deepskyblue;
+}

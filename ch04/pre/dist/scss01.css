@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* scss 기본 문법 */
+a {
+  color: #f00;
+  text-decoration: none;
+}
+a:hover {
+  color: deeppink;
+}
+a:active {
+  color: deepskyblue;
+}

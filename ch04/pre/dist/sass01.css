@@ -1,0 +1,10 @@
+a {
+  color: #f00;
+  text-decoration: none;
+}
+a:hover {
+  color: deeppink;
+}
+a:active {
+  color: deepskyblue;
+}

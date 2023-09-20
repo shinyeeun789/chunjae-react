@@ -1,0 +1,96 @@
+@import '~include-media/dist/include-media';
+@import '~open-color/open-color';
+
+$red:#fa5252;
+$orange:#fd7e14;
+$yellow:#fcc419;
+$green:#40c057;
+$blue:#339af0;
+$indigo:#5c7cfa;
+$violet:#7950f2;
+
+@mixin rectangle($size) {
+    $calculated: 150px * $size;
+    width: $calculated;
+    height: 60px;
+}
+
+.Test3 {
+    clear: both;
+    width: 100vw;
+    height: 600px;
+    background-color: $oc-gray-2;
+    @include media('<768px') {              // 모바일 : @media screen and (max-width:768px) { }
+        background-color: $oc-gray-9;
+    }
+    @include media('<960px') {              // 태블릿 : @media screen and (max-width:959px) and (min-width:768px) { }
+        background: $oc-gray-6;
+    }
+    ul {
+        clear: both;
+        width: 1200px;
+        height: 600px;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .box {
+        cursor: pointer;
+        transition-duration: 2.5s;
+        width: 5px;
+        height: 60px;
+        &.red {
+            background-color: $red;
+            transition-delay: 0s;
+        }
+        &.orange {
+            background-color: $orange;
+            transition-delay: 0.5s;
+        }
+        &.yellow {
+            background-color: $yellow;
+            transition-delay: 1s;
+        }
+        &.green {
+            background-color: $green;
+            transition-delay: 1.5s;
+        }
+        &.blue {
+            background-color: $blue;
+            transition-delay: 2s;
+        }
+        &.indigo {
+            background-color: $indigo;
+            transition-delay: 2.5s;
+        }
+        &.violet {
+            background-color: $violet;
+            transition-delay: 3s;
+        }
+    }
+    ul:hover {
+        .box {
+            &.red {
+                @include rectangle(1);
+            }
+            &.orange {
+                @include rectangle(2);
+            }
+            &.yellow {
+                @include rectangle(3);
+            }
+            &.green {
+                @include rectangle(4);
+            }
+            &.blue {
+                @include rectangle(5);
+            }
+            &.indigo {
+                @include rectangle(6);
+            }
+            &.violet {
+                @include rectangle(7);
+            }
+        }
+    }
+}

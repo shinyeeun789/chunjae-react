@@ -1,0 +1,31 @@
+// 전처리기 삼총사
+// pug : https://naltatis.github.io/jade-syntax-docs/
+// haml : https://haml.info/docs/yardoc/file.REFERENCE.html
+// Slim (HTML) : https://rubydoc.info/gens/slim/frames
+
+-var name = '김이름'
+-var student = { no:1, name:"김천재", point:90 }
+-var arr = ["봄", "여름", "가을", "겨울"]
+
+doctype html 
+html 
+    head 
+        title jade(pug)
+    body 
+        h1 Hello Pug4
+        h2= name
+        h3 #{student.no}
+        h4= student.name 
+        ul 
+            for season in arr
+                li= season
+        select#sel  
+            each season, i in arr 
+                option(value=i) Season #{season}
+        div.controls
+            label(for="id") 아이디
+            input#id(type="text", placeholder="아이디를 입력하세요")
+        if name == "김이름"
+            p Nice meet you
+        else 
+            p Good-bye

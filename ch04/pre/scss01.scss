@@ -1,0 +1,10 @@
+/* scss 기본 문법 */
+
+$color: #f00;
+$color2: deeppink;
+a {
+    color: #f00;
+    text-decoration: none;
+    &:hover { color: $color2; }
+    &:active { color: deepskyblue; }
+}
