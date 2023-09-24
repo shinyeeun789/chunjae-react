@@ -3,20 +3,22 @@ import { useParams } from 'react-router-dom';
 import cat1 from '../images/cat1.jpg';
 import cat2 from '../images/cat2.jpg';
 import cat3 from '../images/cat3.jpg';
+import "./Profile.scss";
+import { Container } from 'react-bootstrap';
 
 const data = {
-    sangmin: {
-        name: '상민',
+    kim: {
+        name: '김이름',
         description: '백엔드를 좋아하는 개발자',
         pic: cat1,
     },
-    yeeun: {
-        name: '예은',
+    lee: {
+        name: '이이름',
         description: '프론트엔드를 좋아하는 개발자',
         pic: cat2,
     },
-    sehun: {
-        name: '세훈',
+    park: {
+        name: '박이름',
         description: '서울을 좋아하는 개발자',
         pic: cat3,
     }
@@ -27,19 +29,21 @@ const Profile = () => {
     const profile = data[params.username];
     return (
         <div>
-            <h2> Profile </h2>
-            <hr/>
-            {profile ? (
-                <div>
-                    <h3> {profile.name} </h3>
-                    <p> {profile.description} </p>
-                    <img src={profile.pic}></img>
-                </div>
-            ) : (
-                <div>
-                    <h3> 해당하는 데이터가 없습니다. </h3>
-                </div>
-            )}
+            <Container className='mt-5 mb-5'>
+                <h2> Profile </h2>
+                <hr/>
+                {profile ? (
+                    <div className='Profile'>
+                        <h3> {profile.name} </h3>
+                        <p> {profile.description} </p>
+                        <img src={profile.pic} alt={profile.name}></img>
+                    </div>
+                ) : (
+                    <div>
+                        <h3> 해당하는 데이터가 없습니다. </h3>
+                    </div>
+                )}
+            </Container>
         </div>
     )
 }

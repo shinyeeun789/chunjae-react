@@ -1,3 +1,5 @@
+// Router(react-router-dom) : BrowserRouter 라고도 하며, 웹 애플리케이션의 경로 및 파라미터, 구조 등을 연결될 수 이쏘돍 하는 훅(hook)의 모음체
+// Router > Routes > Route
 import React, { BrowserRouter as Router, Route, Routes} from 'react-router-dom';      // 페이지를 이동하기 위해 react-router-dom 사용
 import Home from './pages/Home';
 import About from './pages/About';
