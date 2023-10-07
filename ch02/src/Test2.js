@@ -9,9 +9,9 @@ const Test2 = () => {
     // 이벤트 기술
     const onChange = (e) => {
         setTimeout(() => console.log(e), 500);
-        const nextForm = {                          // 폼 객체
-            ...form,                                // 폼의 모든 내용을 가지고 들어옴
-            [e.target.name] : e.target.value
+        const nextForm = {                          
+            ...form,                                // 기존의 form 내용을 이 자리에 복사한 뒤,
+            [e.target.name] : e.target.value        // 원하는 값 덮어 씌우기
         };
         setForm(nextForm);
     };

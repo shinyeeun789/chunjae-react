@@ -8,6 +8,8 @@ import Test6 from './Test6';
 import Test7 from './Test7';
 import Test8 from './Test8';
 import Test9 from './Test9';
+import Counter from './Counter';
+import Say from './Say';
 import reportWebVitals from './reportWebVitals';
 
 // 3. Test1 컴포넌트 추가
@@ -26,6 +28,8 @@ root.render(
     <Test7 irum="최이름" age="58" addr="가나다"/>
     <Test8 />
     <Test9 />
+    <Counter />
+    <Say />
   </React.StrictMode>
 );
 

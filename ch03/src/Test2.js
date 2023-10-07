@@ -28,6 +28,8 @@ const Test2 = () => {
         setInputText('');
     };
     const onRemove = (id) => {
+        // 불변성을 유지하면서 배열의 특정 항목을 지울 때는 배열의 내장 함수 filter 사용
+        // filter 함수 사용 시 배열에서 특정 조건을 만족하는 원소들만 쉽게 분류 가능
         const nextNames = names.filter(data => data.id !== id);
         setNames(nextNames);
     };
