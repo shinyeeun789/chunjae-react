@@ -1,20 +1,13 @@
-// bootstrap 설치
-// yarn으로 설치 | D:\shin\react\ch03 > yarn add react-bootstrap bootstrap
-// npm으로 설치  | D:\shin\react\ch03 > npm install react-bootstrap bootstrap
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Test from './Test6';
-import 'bootstrap/dist/css/bootstrap.css';        // bootstrap 적용시키기
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Counter from './Counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Counter />
-    {/* <Test /> */}
+    <App />
   </React.StrictMode>
 );
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Test2.scss';
 
 const Test2 = () => {
-    let arr = Array.from({length:1000}, () => 0);        // 0인
+    let arr = Array.from({length:1000}, () => 0);
     return (
         <div>
             {
